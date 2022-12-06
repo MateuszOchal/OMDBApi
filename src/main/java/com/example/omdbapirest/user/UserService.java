@@ -4,7 +4,7 @@ import com.example.omdbapirest.movie.Movie;
 import com.example.omdbapirest.movie.MovieService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
+
 
 import java.util.ArrayList;
 import java.util.List;
