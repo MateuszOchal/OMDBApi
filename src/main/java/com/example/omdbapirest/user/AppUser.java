@@ -12,18 +12,17 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class wUser {
+public class AppUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
-//    @OneToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.DETACH})
     @OneToMany
     @JoinColumn(name = "user_id")
     private List<Movie> favouriteMovies;
 
-    public wUser(String name, List<Movie> favouriteMovies) {
+    public AppUser(String name, List<Movie> favouriteMovies) {
         this.name = name;
         this.favouriteMovies = favouriteMovies;
     }

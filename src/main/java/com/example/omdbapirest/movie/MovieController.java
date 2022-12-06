@@ -1,12 +1,10 @@
 package com.example.omdbapirest.movie;
 
-import com.example.omdbapirest.user.UserService;
-import com.example.omdbapirest.user.wUser;
+
 import lombok.RequiredArgsConstructor;
 import org.json.simple.parser.ParseException;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 

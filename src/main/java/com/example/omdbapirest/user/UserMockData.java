@@ -1,14 +1,11 @@
 package com.example.omdbapirest.user;
 
-import com.example.omdbapirest.movie.Movie;
+
 import com.example.omdbapirest.movie.MovieService;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
-import org.json.simple.parser.ParseException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -20,13 +17,13 @@ public class UserMockData {
 
     @PostConstruct
     public void UserMock(){
-        wUser user = new wUser("Jack", List.of(service.getDataFromOMDBAsMovie("mulan"),
+        AppUser user = new AppUser("Jack", List.of(service.getDataFromOMDBAsMovie("mulan"),
                                                      service.getDataFromOMDBAsMovie("anastasia")));
 
-        wUser user1 = new wUser("Jacob", List.of(service.getDataFromOMDBAsMovie("fight+club"),
+        AppUser user1 = new AppUser("Jacob", List.of(service.getDataFromOMDBAsMovie("fight+club"),
                                                        service.getDataFromOMDBAsMovie("silence+of+the+lambs&y=1991")));
 
-        wUser user2 = new wUser("Kate", List.of(service.getDataFromOMDBAsMovie("love+actually"),
+        AppUser user2 = new AppUser("Kate", List.of(service.getDataFromOMDBAsMovie("love+actually"),
                                                       service.getDataFromOMDBAsMovie("titanic")));
 
         repository.save(user);
